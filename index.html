@@ -28,7 +28,6 @@
     min-height: 100vh;
   }
 
-  /* HEADER */
   header {
     background: var(--ink);
     color: var(--paper);
@@ -41,390 +40,190 @@
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 28px,
-      rgba(255,255,255,0.03) 28px,
-      rgba(255,255,255,0.03) 29px
+      0deg, transparent, transparent 28px,
+      rgba(255,255,255,0.03) 28px, rgba(255,255,255,0.03) 29px
     );
   }
-  .header-inner {
-    max-width: 820px;
-    margin: 0 auto;
-    position: relative;
-  }
+  .header-inner { max-width: 820px; margin: 0 auto; position: relative; }
   .header-kicker {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 0.75rem;
   }
   header h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2rem, 5vw, 3.2rem);
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 0.6rem;
+    font-weight: 700; line-height: 1.15; margin-bottom: 0.6rem;
   }
-  header h1 em {
-    font-style: italic;
-    color: #d4b896;
-  }
+  header h1 em { font-style: italic; color: #d4b896; }
   .header-meta {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    color: #999;
-    margin-top: 1.2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #999;
+    margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 1.5rem;
   }
-  .header-meta span { display: flex; align-items: center; gap: 0.4rem; }
   .deadline-badge {
-    display: inline-block;
-    background: var(--accent);
-    color: white;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    padding: 0.25rem 0.75rem;
-    margin-top: 1rem;
-    text-transform: uppercase;
+    display: inline-block; background: var(--accent); color: white;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    letter-spacing: 0.1em; padding: 0.25rem 0.75rem; margin-top: 1rem; text-transform: uppercase;
   }
 
-  /* LAYOUT */
-  main {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 3rem 2rem 5rem;
-  }
+  main { max-width: 820px; margin: 0 auto; padding: 3rem 2rem 5rem; }
 
-  /* SECTION */
   section {
-    margin-bottom: 3.5rem;
-    border-top: 1px solid var(--rule);
-    padding-top: 2rem;
-    opacity: 0;
-    transform: translateY(18px);
+    margin-bottom: 3.5rem; border-top: 1px solid var(--rule); padding-top: 2rem;
+    opacity: 0; transform: translateY(18px);
     animation: fadeUp 0.5s ease forwards;
   }
   section:nth-child(1) { animation-delay: 0.05s; }
-  section:nth-child(2) { animation-delay: 0.15s; }
-  section:nth-child(3) { animation-delay: 0.25s; }
-  section:nth-child(4) { animation-delay: 0.35s; }
-  section:nth-child(5) { animation-delay: 0.45s; }
-  section:nth-child(6) { animation-delay: 0.55s; }
-  section:nth-child(7) { animation-delay: 0.65s; }
+  section:nth-child(2) { animation-delay: 0.12s; }
+  section:nth-child(3) { animation-delay: 0.19s; }
+  section:nth-child(4) { animation-delay: 0.26s; }
+  section:nth-child(5) { animation-delay: 0.33s; }
+  section:nth-child(6) { animation-delay: 0.40s; }
+  section:nth-child(7) { animation-delay: 0.47s; }
+  section:nth-child(8) { animation-delay: 0.54s; }
+  section:nth-child(9) { animation-delay: 0.61s; }
 
-  @keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
   .section-number {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.4rem;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem;
   }
   .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.55rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1.2rem;
+    font-family: 'Playfair Display', serif; font-size: 1.55rem;
+    font-weight: 700; line-height: 1.2; margin-bottom: 1.2rem;
   }
   .section-title .tag {
-    font-size: 0.9rem;
-    font-family: 'IBM Plex Mono', monospace;
-    color: var(--accent);
-    font-style: normal;
-    font-weight: 400;
-    margin-left: 0.6rem;
-    vertical-align: middle;
+    font-size: 0.9rem; font-family: 'IBM Plex Mono', monospace;
+    color: var(--accent); font-style: normal; font-weight: 400;
+    margin-left: 0.6rem; vertical-align: middle;
   }
-
   p { margin-bottom: 1rem; }
 
-  /* CALLOUT BOXES */
   .callout {
-    border-left: 3px solid var(--accent);
-    background: var(--highlight);
-    padding: 1rem 1.25rem;
-    margin: 1.25rem 0;
-    font-size: 0.95rem;
+    border-left: 3px solid var(--accent); background: var(--highlight);
+    padding: 1rem 1.25rem; margin: 1.25rem 0; font-size: 0.95rem;
   }
-  .callout.green {
-    border-color: var(--green);
-    background: #e4ede9;
-  }
-  .callout.warning {
-    border-color: var(--gold);
-    background: #fdf3dc;
-  }
+  .callout.green { border-color: var(--green); background: #e4ede9; }
+  .callout.warning { border-color: var(--gold); background: #fdf3dc; }
+  .callout.dark { border-color: var(--ink); background: #e8e4dc; }
   .callout-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.35rem;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.35rem;
   }
 
-  /* ACTION ITEMS */
-  .action-list {
-    list-style: none;
-    margin: 1rem 0;
-  }
+  .action-list { list-style: none; margin: 1rem 0; }
   .action-list li {
-    display: flex;
-    gap: 0.9rem;
-    align-items: flex-start;
-    margin-bottom: 0.85rem;
-    padding-bottom: 0.85rem;
+    display: flex; gap: 0.9rem; align-items: flex-start;
+    margin-bottom: 0.85rem; padding-bottom: 0.85rem;
     border-bottom: 1px dashed var(--rule);
   }
   .action-list li:last-child { border-bottom: none; margin-bottom: 0; }
   .action-num {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--accent);
-    font-weight: 500;
-    min-width: 1.6rem;
-    padding-top: 3px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    color: var(--accent); font-weight: 500; min-width: 1.6rem; padding-top: 3px;
   }
 
-  /* TRIANGLE / DUO ARCHITECTURE */
-  .triangle-box {
-    border: 1px solid var(--rule);
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    background: white;
+  /* CONTACT CARDS */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); margin: 1.25rem 0; }
+  .contact-card { background: white; padding: 1rem 1.1rem; }
+  .contact-card.primary { border-top: 3px solid var(--accent); }
+  .contact-card.secondary { border-top: 3px solid var(--gold); }
+  .contact-card.advisory { border-top: 3px solid var(--muted); }
+  .contact-name {
+    font-family: 'Playfair Display', serif; font-size: 1rem;
+    font-weight: 700; margin-bottom: 0.2rem;
   }
-  .triangle-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1px;
-    background: var(--rule);
-    margin-top: 1rem;
+  .contact-role {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 0.5rem;
   }
-  .tri-cell {
-    background: var(--paper);
-    padding: 1rem;
-    text-align: center;
+  .contact-why { font-size: 0.85rem; line-height: 1.5; color: #333; }
+  .contact-lever {
+    margin-top: 0.5rem; font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; color: var(--accent);
   }
-  .tri-cell .tri-icon {
-    font-size: 1.4rem;
-    margin-bottom: 0.4rem;
-  }
+
+  .triangle-box { border: 1px solid var(--rule); padding: 1.5rem; margin: 1.5rem 0; background: white; }
+  .triangle-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--rule); margin-top: 1rem; }
+  .tri-cell { background: var(--paper); padding: 1rem; text-align: center; }
+  .tri-cell .tri-icon { font-size: 1.4rem; margin-bottom: 0.4rem; }
   .tri-cell .tri-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.3rem;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem;
   }
-  .tri-cell .tri-role {
-    font-size: 0.85rem;
-    color: var(--muted);
-    font-style: italic;
-  }
+  .tri-cell .tri-role { font-size: 0.85rem; color: var(--muted); font-style: italic; }
   .tri-arrow {
-    text-align: center;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 0.75rem;
-    letter-spacing: 0.05em;
+    text-align: center; font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px; color: var(--muted); margin-top: 0.75rem; letter-spacing: 0.05em;
   }
 
-  /* COMPRESSION CHAIN */
-  .chain {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    margin: 1.25rem 0;
-    border: 1px solid var(--rule);
-    overflow: hidden;
-  }
+  .chain { display: flex; flex-wrap: wrap; gap: 0; margin: 1.25rem 0; border: 1px solid var(--rule); overflow: hidden; }
   .chain-step {
-    flex: 1;
-    min-width: 90px;
-    padding: 0.85rem 0.7rem;
-    border-right: 1px solid var(--rule);
-    background: white;
-    position: relative;
+    flex: 1; min-width: 90px; padding: 0.85rem 0.7rem;
+    border-right: 1px solid var(--rule); background: white;
     transition: background 0.2s;
   }
   .chain-step:last-child { border-right: none; }
   .chain-step:hover { background: var(--highlight); }
-  .chain-dim {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--accent);
-  }
-  .chain-name {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--muted);
-    margin-bottom: 0.3rem;
-  }
-  .chain-desc {
-    font-size: 0.78rem;
-    line-height: 1.45;
-    color: var(--ink);
-  }
+  .chain-dim { font-family: 'IBM Plex Mono', monospace; font-size: 1.1rem; font-weight: 500; color: var(--accent); }
+  .chain-name { font-family: 'IBM Plex Mono', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted); margin-bottom: 0.3rem; }
+  .chain-desc { font-size: 0.78rem; line-height: 1.45; color: var(--ink); }
 
-  /* CHECKLIST */
-  .checklist {
-    list-style: none;
-    margin: 1rem 0;
-  }
-  .checklist li {
-    display: flex;
-    gap: 0.75rem;
-    align-items: flex-start;
-    margin-bottom: 0.65rem;
-    font-size: 0.93rem;
-  }
+  /* SCIENCE THREAD */
+  .science-thread { border: 1px solid var(--rule); background: white; margin: 1.25rem 0; overflow: hidden; }
+  .science-thread-header { background: var(--ink); color: var(--paper); padding: 0.75rem 1.25rem; }
+  .science-thread-header .st-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #888; }
+  .science-thread-header .st-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; }
+  .science-thread-body { padding: 1.1rem 1.25rem; }
+  .science-arrow { display: flex; align-items: center; gap: 0.75rem; margin: 0.5rem 0; font-size: 0.9rem; }
+  .science-arrow .sa-node { background: var(--highlight); border: 1px solid var(--rule); padding: 0.3rem 0.65rem; font-size: 0.85rem; white-space: nowrap; }
+  .science-arrow .sa-sep { color: var(--accent); font-weight: bold; font-size: 1.1rem; }
+
+  .checklist { list-style: none; margin: 1rem 0; }
+  .checklist li { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 0.65rem; font-size: 0.93rem; }
   .check-box {
-    width: 16px;
-    height: 16px;
-    border: 1.5px solid var(--muted);
-    flex-shrink: 0;
-    margin-top: 3px;
-    cursor: pointer;
-    position: relative;
-    transition: border-color 0.2s, background 0.2s;
+    width: 16px; height: 16px; border: 1.5px solid var(--muted); flex-shrink: 0;
+    margin-top: 3px; cursor: pointer; position: relative; transition: border-color 0.2s, background 0.2s;
   }
-  .check-box.done {
-    background: var(--green);
-    border-color: var(--green);
-  }
-  .check-box.done::after {
-    content: '✓';
-    position: absolute;
-    top: -2px; left: 1px;
-    color: white;
-    font-size: 12px;
-    font-family: sans-serif;
-  }
+  .check-box.done { background: var(--green); border-color: var(--green); }
+  .check-box.done::after { content: '✓'; position: absolute; top: -2px; left: 1px; color: white; font-size: 12px; font-family: sans-serif; }
   .check-text { cursor: pointer; }
   .check-text.done { text-decoration: line-through; color: var(--muted); }
 
-  /* QUOTE */
   blockquote {
-    border-left: 3px solid var(--ink);
-    padding: 0.75rem 1.25rem;
-    margin: 1.25rem 0;
-    font-style: italic;
-    color: #333;
-    background: rgba(0,0,0,0.03);
+    border-left: 3px solid var(--ink); padding: 0.75rem 1.25rem;
+    margin: 1.25rem 0; font-style: italic; color: #333; background: rgba(0,0,0,0.03);
   }
-  blockquote cite {
-    display: block;
-    font-style: normal;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    margin-top: 0.4rem;
-  }
+  blockquote cite { display: block; font-style: normal; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 0.4rem; }
 
-  /* STATUS TRACKER */
-  .tracker {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 1.75rem;
-    margin: 1.5rem 0;
-  }
-  .tracker-title {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #888;
-    margin-bottom: 1rem;
-  }
-  .tracker-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-  }
-  .tracker-item {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 0.88rem;
-  }
-  .tracker-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
+  .tracker { background: var(--ink); color: var(--paper); padding: 1.75rem; margin: 1.5rem 0; }
+  .tracker-title { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #888; margin-bottom: 1rem; }
+  .tracker-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .tracker-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; }
+  .tracker-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
   .dot-pending { background: #666; }
   .dot-inprogress { background: var(--gold); }
   .dot-done { background: #4caf78; }
   .dot-critical { background: var(--accent); }
 
-  /* FOOTER */
-  footer {
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 0 2rem 3rem;
-    border-top: 1px solid var(--rule);
-    padding-top: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .footer-left {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-  }
-  .footer-right {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    text-align: right;
-  }
-  .ukubona-sig {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 0.95rem;
-    color: var(--ink);
-  }
+  .update-log { margin-top: 2rem; border-top: 1px dashed var(--rule); padding-top: 1.25rem; }
+  .update-entry { display: flex; gap: 1rem; margin-bottom: 0.6rem; font-size: 0.85rem; }
+  .update-date { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); min-width: 90px; }
 
-  /* PRINT / SHARE NOTE */
-  .update-log {
-    margin-top: 2rem;
-    border-top: 1px dashed var(--rule);
-    padding-top: 1.25rem;
+  footer {
+    max-width: 820px; margin: 0 auto; padding: 0 2rem 3rem;
+    border-top: 1px solid var(--rule); padding-top: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
   }
-  .update-entry {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 0.6rem;
-    font-size: 0.85rem;
-  }
-  .update-date {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    min-width: 90px;
-  }
+  .footer-left { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); }
+  .footer-right { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); text-align: right; }
+  .ukubona-sig { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: var(--ink); }
 
   @media (max-width: 600px) {
     .triangle-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
     .chain { flex-direction: column; }
     .chain-step { border-right: none; border-bottom: 1px solid var(--rule); }
     .tracker-grid { grid-template-columns: 1fr; }
@@ -435,23 +234,48 @@
 
 <header>
   <div class="header-inner">
-    <div class="header-kicker">Confidential Strategy Brief · Fulbright Research Award 2027</div>
+    <div class="header-kicker">Living Strategy Brief · Fulbright Research Award 2027</div>
     <h1>Aging with HIV<br>in Sub-Saharan Africa<br><em>A Systematic Review — and More</em></h1>
     <div class="deadline-badge">⏱ Deadline: 10 April 2026</div>
     <div class="header-meta">
       <span>📍 Boniface Kikaire · Uganda Christian University / Makerere</span>
-      <span>🤝 Ukubona LLC · K08-AG065520 · Johns Hopkins (target)</span>
+      <span>🤝 Ukubona LLC · K08-AG065520 · Johns Hopkins</span>
     </div>
   </div>
 </header>
 
 <main>
 
-  <!-- SECTION 1: THE ARCHITECTURE -->
+  <!-- SECTION 00: THE HUMAN BRIDGE -->
+  <section>
+    <div class="section-number">00 — The Founding Insight</div>
+    <h2 class="section-title">The Human Bridge <span class="tag">// this is what Fulbright funds</span></h2>
+
+    <p>Before strategy, before structure — the most important asset in this application is a person.</p>
+
+    <div class="callout dark">
+      <div class="callout-label">The Ukubona Facilitator — Biographical Fact</div>
+      A <strong>Ugandan-American physician-scientist</strong> (MD, MPH, PhDc) who trained and worked at <strong>Johns Hopkins from 2006–2016</strong>, received NIA K08 funding on aging (2020–2024), and is currently completing a doctorate in conflict transformation (George Mason / GTPCI). Registered as Ukubona LLC in Virginia. A co-author with Keri Althoff. A former Hopkins faculty member. Now building policy digital twins between Uganda and the United States.
+    </div>
+
+    <blockquote>
+      "Fulbright exists to fund living bridges between nations. The facilitator of this application <em>is</em> that bridge — not metaphorically, but biographically. Hopkins → Uganda → Hopkins → Uganda. That arc is the proposal's most powerful asset, and it should be named explicitly."
+      <cite>— Strategic note, 31 Mar 2026</cite>
+    </blockquote>
+
+    <p>This framing reframes the entire application: Boniface is not a foreign applicant cold-knocking on Hopkins' door. He is being <strong>sponsored by a Ugandan-American who already lives inside both worlds</strong> — and who is actively building the infrastructure (Ukubona, UCU collaboration, automated reviews) that his fellowship will accelerate.</p>
+
+    <div class="callout green">
+      <div class="callout-label">Narrative sentence for the application</div>
+      "My proposed host environment is not simply an institution — it is a sustained transnational partnership anchored by a Ugandan-American investigator who has spent two decades building the methodological and relational infrastructure connecting Johns Hopkins to East African health systems."
+    </div>
+  </section>
+
+  <!-- SECTION 01: ARCHITECTURE -->
   <section>
     <div class="section-number">01 — Core Strategy</div>
-    <h2 class="section-title">The "Duo" Architecture <span class="tag">// recommended</span></h2>
-    <p>The strongest application is not a solo systematic review, nor a standalone tech proposal. It is a <strong>Public-Academic-Industry Triangle</strong> that maps onto each Fulbright scoring domain with precision.</p>
+    <h2 class="section-title">The Triangle Architecture <span class="tag">// recommended</span></h2>
+    <p>The strongest application is a <strong>Public-Academic-Industry Triangle</strong> that maps onto each Fulbright scoring domain with precision.</p>
 
     <div class="triangle-box">
       <div class="section-number" style="margin-bottom:0.3rem">The Three-Node Partnership</div>
@@ -459,168 +283,235 @@
         <div class="tri-cell">
           <div class="tri-icon">🏛️</div>
           <div class="tri-label">Johns Hopkins</div>
-          <div><strong>COA / CFAR</strong></div>
-          <div class="tri-role">Primary Host · Methodological anchor · MACS/WIHS cohort access</div>
+          <div><strong>COA / CFAR / NA-ACCORD</strong></div>
+          <div class="tri-role">Primary Host · Methodological anchor · MACS/WIHS cohort access · Named PIs</div>
         </div>
         <div class="tri-cell">
           <div class="tri-icon">🌍</div>
           <div class="tri-label">UCU / Makerere</div>
           <div><strong>Uganda Field Base</strong></div>
-          <div class="tri-role">Evidence collection · Capacity building · Return-home destination</div>
+          <div class="tri-role">Evidence collection · Automated review infrastructure · Capacity building · Return destination</div>
         </div>
         <div class="tri-cell">
           <div class="tri-icon">⚡</div>
           <div class="tri-label">Ukubona LLC</div>
           <div><strong>Translation Engine</strong></div>
-          <div class="tri-role">Policy Digital Twin · Decision architecture · NPA / MoH interface</div>
+          <div class="tri-role">Human bridge · Policy Digital Twin · Decision architecture · NPA / MoH interface</div>
         </div>
       </div>
       <div class="tri-arrow">T → M → V → E → S ↺ &nbsp;|&nbsp; Tensor → Matrix → Vector → Eigenmode → Scalar</div>
     </div>
 
     <div class="callout green">
-      <div class="callout-label">Why this works</div>
-      Hopkins satisfies the Environment score. Ukubona elevates the Innovation and Impact scores. UCU closes the "capacity-building & return" narrative that Fulbright requires. Each node is non-redundant.
+      <div class="callout-label">Why this works for every scoring domain</div>
+      Hopkins satisfies the <strong>Environment</strong> score. Ukubona elevates <strong>Innovation</strong> and <strong>Impact</strong>. UCU closes the <strong>capacity-building & return</strong> narrative that Fulbright requires. The facilitator's biography satisfies the <strong>Mutual Understanding</strong> criterion — the one most applicants leave implicit.
     </div>
   </section>
 
-  <!-- SECTION 2: HOST LETTER -->
+  <!-- SECTION 02: SPECIFIC CONTACTS -->
   <section>
-    <div class="section-number">02 — The Host Letter</div>
-    <h2 class="section-title">Securing Hopkins <span class="tag">// highest priority</span></h2>
-    <p>A generic letter from the <em>Johns Hopkins Center on Aging and Health</em> is not sufficient. You need a <strong>named PI who is intellectually invested</strong> in this project.</p>
+    <div class="section-number">02 — Named Hopkins Contacts</div>
+    <h2 class="section-title">The Right People <span class="tag">// not departments, persons</span></h2>
 
-    <ul class="action-list">
-      <li><span class="action-num">→</span><span>Identify <strong>1–2 specific faculty</strong> at COA or CFAR whose active work intersects: <em>HIV + aging, cohorts/epidemiology, structural/health-systems interventions.</em></span></li>
-      <li><span class="action-num">→</span><span>Provide a tight <strong>1-page pitch</strong> tailored to that person's interests — Ukubona can help shape this.</span></li>
-      <li><span class="action-num">→</span><span>The warm intro from Ukubona (former Hopkins faculty, K08-AG065520) is available — but only once the pitch is ready.</span></li>
-      <li><span class="action-num">→</span><span>The email must frame a <strong>mutually beneficial intellectual exchange</strong>: not just a host request, but a genuine collaboration proposal.</span></li>
-    </ul>
+    <p>A generic departmental letter is insufficient. The application needs a <strong>named PI who is intellectually invested</strong>. Below are the specific contacts identified, ranked by strategic fit.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card primary">
+        <div class="contact-name">Keri N. Althoff, PhD</div>
+        <div class="contact-role">🔴 Primary Target — Highest leverage</div>
+        <div class="contact-why">Chief of the Data Coordinating Center for <strong>NA-ACCORD</strong> (North American AIDS Cohort Collaboration on Research and Design). Manages MACS/WIHS cohort data infrastructure at Hopkins — the exact longitudinal HIV cohort this application references. <strong>Existing co-authorship with Ukubona facilitator.</strong> This is not a cold ask.</div>
+        <div class="contact-lever">Lever: prior collaboration → warm intro already earned</div>
+      </div>
+      <div class="contact-card primary">
+        <div class="contact-name">Gregory M. Lucas, MD, PhD</div>
+        <div class="contact-role">🔴 Primary Target — HIV + kidney</div>
+        <div class="contact-why">Hopkins HIV/kidney researcher. Directly relevant given the APOL1/HIV/CKD scientific thread (see Section 04). His work bridges HIV epidemiology and organ-specific sequelae in African-ancestry populations — the exact intersection of Boniface's structural intervention focus and the biological substrate that shapes QoL outcomes.</div>
+        <div class="contact-lever">Lever: scientific complementarity with APOL1 thread</div>
+      </div>
+      <div class="contact-card secondary">
+        <div class="contact-name">Sneha Mani</div>
+        <div class="contact-role">🟡 Secondary — International Aging</div>
+        <div class="contact-why">Leads the <strong>International Approaches to Aging</strong> working group at COAH. Focus includes harmonized HRS-companion data across countries, caregiving, and dementia care globally. Her group is explicitly interested in how different countries measure aging — directly relevant to SSA framing.</div>
+        <div class="contact-lever">Lever: COAH member with SSA-adjacent mandate</div>
+      </div>
+      <div class="contact-card advisory">
+        <div class="contact-name">Brian Buta, MHS</div>
+        <div class="contact-role">⚫ Advisory Only — Admin role</div>
+        <div class="contact-why">Manages the Frailty and Multisystem Dysregulation Working Group (OAIC). More administrative than PI-level research. Useful for navigating COAH logistics and introductions, but should not be the letter-writer — insufficient research alignment and limited PI authority for Fulbright purposes.</div>
+        <div class="contact-lever">Lever: internal navigation only</div>
+      </div>
+    </div>
 
     <div class="callout warning">
-      <div class="callout-label">Ukubona's Role</div>
-      Ukubona LLC should appear as <strong>Translational Collaborator</strong> — not as primary host. This is actually a stronger framing: it adds a unique differentiating layer without competing with Hopkins for the "Environment" score.
+      <div class="callout-label">Action sequence</div>
+      <strong>Step 1:</strong> Ukubona facilitator reaches out to Keri Althoff directly (prior relationship) with a 1-paragraph framing of the collaboration. <strong>Step 2:</strong> Boniface sends a tailored 1-page pitch within 48hrs of that intro. <strong>Step 3:</strong> Parallel, softer inquiry to Sneha Mani via COAH email as secondary anchor.
     </div>
   </section>
 
-  <!-- SECTION 3: WHY USA -->
+  <!-- SECTION 03: WHY USA -->
   <section>
     <div class="section-number">03 — Justification for U.S. Residence</div>
     <h2 class="section-title">Kill the Weak Argument <span class="tag">// rewrite needed</span></h2>
 
     <div class="callout">
       <div class="callout-label">Current draft — flagged as weak</div>
-      The current Section 5 justifies U.S. presence by citing access to "comprehensive bibliographic databases" and "methodological support." In 2026, a systematic review can be conducted from anywhere with reliable internet. Reviewers will flag this immediately.
+      Section 5 currently justifies U.S. presence via "comprehensive bibliographic databases" and "methodological support." In 2026, a systematic review can be conducted from anywhere with stable internet. Reviewers will flag this immediately.
     </div>
 
-    <p>The winning pivot: justify why <strong>physical presence is irreplaceable</strong>, not just convenient.</p>
+    <p>The winning pivot: justify why <strong>physical presence is irreplaceable</strong>, not merely convenient. Three pillars:</p>
+
+    <ul class="action-list">
+      <li><span class="action-num">1</span><span><strong>Embedded cohort training:</strong> Direct access to MACS/WIHS analytic teams at Hopkins — longitudinal HIV/aging data that cannot be accessed or interpreted remotely without deep methodological enculturation.</span></li>
+      <li><span class="action-num">2</span><span><strong>Proprietary method transfer:</strong> Advanced causal-inference and meta-analytic modeling techniques from leading HIV epidemiologists — not in textbooks, acquired through apprenticeship and presence.</span></li>
+      <li><span class="action-num">3</span><span><strong>The human bridge:</strong> Physical integration into the Ukubona network — a Ugandan-American infrastructure connecting Hopkins directly to UCU, Makerere, and Uganda's National Planning Authority. This connection only activates in person.</span></li>
+    </ul>
 
     <blockquote>
-      "I am not traveling to the United States for internet access. I am embedding myself inside the world's foremost HIV-aging research ecosystem to acquire advanced analytical methods — methods not transferable remotely — which I will return home to institutionalize."
-      <cite>— Recommended framing</cite>
+      "I am not traveling to the United States for internet access. I am embedding myself inside a living transnational research ecosystem — one built by a Ugandan-American investigator who has spent twenty years constructing the methodological bridge I intend to cross."
+      <cite>— Recommended narrative framing for Section 5</cite>
     </blockquote>
 
-    <p>Specifically mention:</p>
-    <ul class="action-list">
-      <li><span class="action-num">→</span><span>Direct training with analytic teams managing the <strong>MACS/WIHS Combined Cohort Study</strong> at Hopkins</span></li>
-      <li><span class="action-num">→</span><span>Advanced meta-analytical and causal-inference methods from leading HIV epidemiologists — only learnable in person</span></li>
-      <li><span class="action-num">→</span><span>Integration into Ukubona's <strong>policy digital twin pipeline</strong> — translating effect sizes into decision architectures</span></li>
-      <li><span class="action-num">→</span><span>Return commitment: building methodological capacity at <strong>UCU and Makerere</strong>, feeding the NPA and Ministry of Health</span></li>
-    </ul>
+    <p>Close with the return commitment: the methods acquired will be institutionalized at <strong>UCU and Makerere</strong> and fed into Uganda's National Planning Authority — at a moment when declining external funding makes domestic evidence synthesis existentially urgent.</p>
   </section>
 
-  <!-- SECTION 4: STRENGTHEN PROTOCOL -->
+  <!-- SECTION 04: SCIENTIFIC THREAD -->
   <section>
-    <div class="section-number">04 — Protocol Strengthening</div>
+    <div class="section-number">04 — Expanded Scientific Context</div>
+    <h2 class="section-title">The APOL1 Thread <span class="tag">// sharpens the case</span></h2>
+
+    <p>The QoL framework for aging with HIV in Uganda is not only about social interventions. There is a <strong>biological substrate</strong> that makes this population distinct — and naming it makes the proposal more scientifically precise and more compelling to Hopkins reviewers.</p>
+
+    <div class="science-thread">
+      <div class="science-thread-header">
+        <div class="st-label">Scientific Causal Chain</div>
+        <div class="st-title">From Genetics to Quality of Life in Ugandan People Aging with HIV</div>
+      </div>
+      <div class="science-thread-body">
+        <div class="science-arrow">
+          <span class="sa-node">APOL1 high-risk genotype<br><small style="color:#888">~30–40% prevalence in Ugandan adults</small></span>
+          <span class="sa-sep">×</span>
+          <span class="sa-node">HIV infection</span>
+          <span class="sa-sep">→</span>
+          <span class="sa-node">HIV-Associated Nephropathy (HIVAN)<br>Accelerated CKD</span>
+        </div>
+        <div class="science-arrow" style="margin-top:0.5rem">
+          <span class="sa-node">CKD / Kidney Failure</span>
+          <span class="sa-sep">→</span>
+          <span class="sa-node">Reduced QoL<br>Multimorbidity<br>Treatment complexity</span>
+          <span class="sa-sep">→</span>
+          <span class="sa-node">Structural intervention response varies<br>by biological substrate</span>
+        </div>
+        <p style="margin-top:0.85rem; font-size:0.88rem; color:var(--muted);">The SEARCH-CKD study (Uganda, 146 districts) found a substantial fraction of kidney disease cases unexplained by known risk factors — the interaction of APOL1 with HIV-related inflammation is a primary candidate. This is not peripheral to Boniface's review: it is the mechanistic reason why structural QoL interventions may have heterogeneous effects across sub-populations.</p>
+      </div>
+    </div>
+
+    <div class="callout green">
+      <div class="callout-label">Why this matters for the application</div>
+      Mentioning APOL1 × HIV interaction — and noting that Gregory Lucas and Keri Althoff's networks have studied this in Black African cohorts — signals to Hopkins reviewers that Boniface understands the <em>biological specificity</em> of his target population, not just the social determinants. This elevates the proposal from epidemiology to precision-medicine-informed public health.
+    </div>
+
+    <div class="callout warning">
+      <div class="callout-label">Open question to resolve</div>
+      What is the precise prevalence of APOL1 high-risk genotype (G1/G2) in Uganda specifically? Keri Althoff's NA-ACCORD network and Lucas's kidney/HIV work may have unpublished estimates — this is a legitimate scientific inquiry to raise in the introduction email.
+    </div>
+  </section>
+
+  <!-- SECTION 05: PROTOCOL -->
+  <section>
+    <div class="section-number">05 — Protocol Strengthening</div>
     <h2 class="section-title">Tighten the Science <span class="tag">// critical fix</span></h2>
 
-    <p>The methodological foundation (PRISMA, Cochrane) is solid. The threat to the analysis is <strong>excessive parameter breadth</strong>.</p>
+    <p>The methodological foundation (PRISMA, Cochrane) is solid. The threat is <strong>excessive parameter breadth</strong> collapsing the meta-analysis under heterogeneity.</p>
 
     <div class="callout">
       <div class="callout-label">Current weakness</div>
-      Structural intervention domains currently include: policy environment, healthcare access, linkage to care, community empowerment, economic strengthening — and more. Pooling across all these domains in a meta-analysis will generate extreme heterogeneity. The statistical outputs will be uninterpretable.
+      Structural intervention domains include: policy environment, healthcare access, linkage to care, community empowerment, economic strengthening — and more. Pooling across all these in a single meta-analysis generates I² values that make results uninterpretable. Reviewers will note this.
     </div>
 
-    <p><strong>The fix:</strong> Narrow to <strong>2–3 domains maximum</strong> — for example:</p>
+    <p><strong>The fix:</strong> Narrow to <strong>2–3 domains maximum</strong>, pre-specified:</p>
     <ul class="action-list">
       <li><span class="action-num">A</span><span>Health system delivery models (ART delivery integration, differentiated service delivery)</span></li>
       <li><span class="action-num">B</span><span>Social protection and economic strengthening programmes</span></li>
       <li><span class="action-num">C</span><span>Community-based adherence and retention systems</span></li>
     </ul>
-    <p>Alternatively, define a <strong>stratified hierarchy</strong> of structural levels and pre-specify subgroup analyses. The goal is ensuring you are comparing apples to apples, not apples to galaxies.</p>
+    <p>Or: define a pre-specified <strong>stratified hierarchy</strong> of structural levels with subgroup analyses. The goal is comparing apples to apples. APOL1 status and HIV virological control status should be considered as effect modifiers in the subgroup framework.</p>
   </section>
 
-  <!-- SECTION 5: UKUBONA COMPRESSION CHAIN -->
+  <!-- SECTION 06: UKUBONA LAYER -->
   <section>
-    <div class="section-number">05 — The Ukubona Layer</div>
+    <div class="section-number">06 — The Ukubona Layer</div>
     <h2 class="section-title">From Review to Policy Engine</h2>
-    <p>This is what elevates the proposal from "another systematic review" to a <strong>next-generation policy simulation platform</strong>. The meta-analysis feeds directly into the Ukubona compression chain:</p>
+    <p>The UCU collaboration on automated systematic reviews (already live: <code style="font-size:0.82rem; background:#eee; padding:0.1rem 0.4rem;">ukb-dt.github.io/repos-01</code>) is not tangential — it is the production infrastructure that makes this project a <strong>platform, not a paper</strong>.</p>
 
     <div class="chain">
       <div class="chain-step">
         <div class="chain-name">Tensor · 3+</div>
         <div class="chain-dim">Sensation</div>
-        <div class="chain-desc">Raw reality of aging HIV populations in SSA — multimorbidity, social isolation, resource constraints</div>
+        <div class="chain-desc">Raw reality of aging HIV populations in SSA — multimorbidity, APOL1 biology, social isolation, resource constraints</div>
       </div>
       <div class="chain-step">
         <div class="chain-name">Matrix · 2</div>
         <div class="chain-dim">Attention</div>
-        <div class="chain-desc"><strong>The systematic review.</strong> Identifies which structural interventions correlate with QoL improvements</div>
+        <div class="chain-desc"><strong>The systematic review.</strong> Identifies which structural interventions correlate with QoL improvements across SSA contexts</div>
       </div>
       <div class="chain-step">
         <div class="chain-name">Vector · 1</div>
         <div class="chain-dim">Intention</div>
-        <div class="chain-desc">Extracted effect sizes and data points — the evidence-bound parameters from the meta-analysis</div>
+        <div class="chain-desc">Extracted effect sizes — evidence-bound parameters from the meta-analysis, stratified by intervention domain</div>
       </div>
       <div class="chain-step">
         <div class="chain-name">Eigenmode · E</div>
         <div class="chain-dim">Reaction</div>
-        <div class="chain-desc">High-impact interventions that remain effective across SSA health system contexts</div>
+        <div class="chain-desc">High-impact interventions robust across SSA health system contexts — the enduring policy frequencies</div>
       </div>
       <div class="chain-step">
         <div class="chain-name">Scalar · 0</div>
         <div class="chain-dim">Action</div>
-        <div class="chain-desc"><strong>The decisive output.</strong> A resource-allocation model for Uganda's NPA and Ministry of Health</div>
+        <div class="chain-desc"><strong>Decisive output.</strong> Resource-allocation model for Uganda's NPA and Ministry of Health</div>
       </div>
     </div>
 
     <div class="callout green">
-      <div class="callout-label">The elevator pitch</div>
-      "Your project is not: <em>reviewing interventions.</em><br>
-      Your project is: <strong>identifying high-impact structural levers for aging HIV populations under resource constraints — and building the policy engine to deploy them.</strong>"
+      <div class="callout-label">The pitch in one sentence</div>
+      "This project is not a systematic review. It is the construction of a <strong>Policy Digital Twin for aging with HIV in Sub-Saharan Africa</strong> — built by a Ugandan, trained at Hopkins, translated by Ukubona, delivered to Uganda's government."
     </div>
   </section>
 
-  <!-- SECTION 6: DISSEMINATION + POLICY -->
+  <!-- SECTION 07: POLICY TRANSLATION -->
   <section>
-    <div class="section-number">06 — Policy Translation</div>
+    <div class="section-number">07 — Policy Translation</div>
     <h2 class="section-title">Beyond Journals</h2>
-    <p>The dissemination plan (journals, conferences, policy briefs) is standard but can be sharpened. The key addition: frame the systematic review outputs explicitly as <strong>parameters for national planning frameworks</strong>.</p>
 
     <ul class="action-list">
-      <li><span class="action-num">→</span><span>Name the <strong>Uganda National Planning Authority</strong> and <strong>Ministry of Health</strong> as direct data consumers — declining external funding makes domestic evidence prioritization urgent</span></li>
-      <li><span class="action-num">→</span><span>The review generates the <em>exact parameters</em> needed for the next National Development Plan health module</span></li>
-      <li><span class="action-num">→</span><span>Ukubona's automated review infrastructure (already in development with UCU) becomes the <em>dissemination engine</em>, not just a pipeline tool</span></li>
-      <li><span class="action-num">→</span><span>Position future SBIR potential: the Digital Twin for HIV/Aging Policy in SSA is a natural Phase I SBIR concept</span></li>
+      <li><span class="action-num">→</span><span>Name the <strong>Uganda National Planning Authority</strong> and <strong>Ministry of Health</strong> as direct data consumers — declining external funding (PEPFAR uncertainty) makes domestic evidence synthesis urgent and politically visible</span></li>
+      <li><span class="action-num">→</span><span>The review outputs become parameters for the next <strong>National Development Plan</strong> health module</span></li>
+      <li><span class="action-num">→</span><span>Ukubona's automated review infrastructure (UCU collaboration) becomes the <em>sustained dissemination engine</em> — not a one-time deliverable</span></li>
+      <li><span class="action-num">→</span><span>SBIR evolution: a <strong>Digital Twin for HIV/Aging Policy in SSA</strong> is a viable Phase I SBIR concept — Ukubona as the commercialization vehicle</span></li>
     </ul>
   </section>
 
-  <!-- SECTION 7: CHECKLIST / TRACKER -->
+  <!-- SECTION 08: CHECKLIST -->
   <section>
-    <div class="section-number">07 — Action Checklist</div>
+    <div class="section-number">08 — Action Checklist</div>
     <h2 class="section-title">Between Now and 10 April</h2>
 
     <div class="tracker">
-      <div class="tracker-title">Current Status — Updated as of session</div>
+      <div class="tracker-title">Status — Updated 31 March 2026</div>
       <div class="tracker-grid">
-        <div class="tracker-item"><div class="tracker-dot dot-critical"></div>Hopkins PI identification</div>
-        <div class="tracker-item"><div class="tracker-dot dot-critical"></div>Section 5 rewrite (Why USA)</div>
-        <div class="tracker-item"><div class="tracker-dot dot-inprogress"></div>Protocol narrowing (domains)</div>
+        <div class="tracker-item"><div class="tracker-dot dot-critical"></div>Keri Althoff intro email (Ukubona → Althoff)</div>
+        <div class="tracker-item"><div class="tracker-dot dot-critical"></div>Section 5 rewrite (Why USA — 3 pillars)</div>
+        <div class="tracker-item"><div class="tracker-dot dot-critical"></div>1-page pitch for Althoff (Boniface drafts)</div>
+        <div class="tracker-item"><div class="tracker-dot dot-inprogress"></div>Protocol narrowing (2–3 domains)</div>
         <div class="tracker-item"><div class="tracker-dot dot-inprogress"></div>Ukubona support letter draft</div>
-        <div class="tracker-item"><div class="tracker-dot dot-pending"></div>Hopkins anchor letter secured</div>
-        <div class="tracker-item"><div class="tracker-dot dot-pending"></div>NPA / MoH stakeholder named</div>
+        <div class="tracker-item"><div class="tracker-dot dot-inprogress"></div>Sneha Mani secondary inquiry</div>
+        <div class="tracker-item"><div class="tracker-dot dot-pending"></div>Hopkins primary host letter secured</div>
+        <div class="tracker-item"><div class="tracker-dot dot-pending"></div>APOL1 prevalence data confirmed</div>
+        <div class="tracker-item"><div class="tracker-dot dot-pending"></div>NPA / MoH contact named in dissemination</div>
+        <div class="tracker-item"><div class="tracker-dot dot-pending"></div>G. Lucas outreach (HIV/kidney thread)</div>
         <div class="tracker-item"><div class="tracker-dot dot-done"></div>Core topic defined ✓</div>
         <div class="tracker-item"><div class="tracker-dot dot-done"></div>PRISMA / Cochrane framework ✓</div>
+        <div class="tracker-item"><div class="tracker-dot dot-done"></div>UCU automated review collab active ✓</div>
+        <div class="tracker-item"><div class="tracker-dot dot-done"></div>Strategy brief issued ✓</div>
       </div>
       <div style="margin-top:1rem; font-family:'IBM Plex Mono',monospace; font-size:10px; color:#666;">
         🔴 Critical &nbsp;|&nbsp; 🟡 In Progress &nbsp;|&nbsp; ⚫ Pending &nbsp;|&nbsp; 🟢 Done
@@ -628,15 +519,17 @@
     </div>
 
     <ul class="checklist" id="checklist">
-      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Identify 1–2 Hopkins PIs (COA or CFAR) with HIV + aging portfolio</span></li>
-      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Write tailored 1-page pitch for each target faculty</span></li>
-      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Trigger warm intro email via Ukubona</span></li>
-      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Rewrite Section 5 (Why USA) — pivot to embedded ecosystem access</span></li>
-      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Narrow structural intervention domains to 2–3 max</span></li>
-      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Draft Ukubona Translational Partner letter</span></li>
-      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Secure Hopkins primary host letter</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Ukubona facilitator sends intro to Keri Althoff (prior co-author — warm ask)</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Boniface prepares tailored 1-page pitch for Althoff within 48hrs</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Parallel soft inquiry to Sneha Mani (COAH International Aging group)</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Rewrite Section 5 (Why USA) — three pillars: cohort access, method transfer, human bridge</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Narrow structural intervention domains to 2–3 max with pre-specified subgroups</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Incorporate APOL1 × HIV biological framing into introduction</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Draft Ukubona Translational Partner letter (collaborator, not host)</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Secure Hopkins primary host letter from named PI</span></li>
       <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Name specific NPA / Ministry of Health contact in dissemination plan</span></li>
-      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Final proposal review — coherence check across all sections</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Explore G. Lucas engagement for HIV/kidney/APOL1 scientific thread</span></li>
+      <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Final coherence review — all sections speak to one narrative</span></li>
       <li><div class="check-box" onclick="toggle(this)"></div><span class="check-text" onclick="toggle(this.previousElementSibling)">Submit by 10 April 2026</span></li>
     </ul>
 
@@ -644,11 +537,15 @@
       <div class="section-number" style="margin-bottom:0.75rem">Update Log</div>
       <div class="update-entry">
         <span class="update-date">31 Mar 2026</span>
-        <span>Initial strategy brief issued. Zoom call completed. Duo architecture agreed. Next: Hopkins PI identification.</span>
+        <span>v2 — Expanded with specific Hopkins contacts (Althoff, Lucas, Mani, Buta advisory note), APOL1/HIV/CKD scientific thread, human bridge framing formalized, checklist updated. Duo → Triangle architecture. Living document activated.</span>
+      </div>
+      <div class="update-entry">
+        <span class="update-date">31 Mar 2026</span>
+        <span>v1 — Initial strategy brief issued. Zoom call completed. Duo architecture agreed.</span>
       </div>
       <div class="update-entry" style="color:#aaa; font-style:italic;">
         <span class="update-date">—</span>
-        <span>Future updates will be added here as the application progresses.</span>
+        <span>Future entries added here as application progresses toward 10 April 2026.</span>
       </div>
     </div>
   </section>
@@ -664,7 +561,7 @@
   <div class="footer-right">
     For Boniface Kikaire<br>
     Fulbright Research Award 2027<br>
-    Deadline: 10 April 2026
+    Deadline: 10 April 2026 · v2
   </div>
 </footer>
 
@@ -678,5 +575,5 @@
   }
 </script>
 
-</body>
+</body>    
 </html>
